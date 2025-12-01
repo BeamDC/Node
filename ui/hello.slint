@@ -1,0 +1,61 @@
+import { Button, VerticalBox, HorizontalBox } from "std-widgets.slint";
+
+export component MainWindow inherits Window {
+    VerticalLayout {
+        toolbar := HorizontalLayout {
+            height: 5%;
+            width: 100%;
+
+            Rectangle {
+                background: #2c2c2c;
+                height: 100%;
+                width: 100%;
+
+                // border line
+                Rectangle {
+                    background: #484848;
+                    height: 2px;
+                    width: 100%;
+                    y: parent.height - self.height;
+                }
+            }
+        }
+
+        HorizontalLayout {
+            height: 95%;
+            width: 100%;
+
+            // project format display
+            project := VerticalLayout {
+                width: 15%;
+                height: 100%;
+
+                Rectangle {
+                    background: #2c2c2c;
+                    height: 100%;
+                    width: 100%;
+
+                    // border line
+                    Rectangle {
+                        background: #484848;
+                        width: 2px;
+                        height: 100%;
+                        x: parent.width - self.width;
+                    }
+                }
+            }
+
+            // editor display
+            editor := VerticalLayout {
+                width: 85%;
+                height: 100%;
+
+                Rectangle {
+                    background: #2c2c2c;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
