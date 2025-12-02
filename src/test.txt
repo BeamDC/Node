@@ -1,0 +1,25 @@
+Hello! The code below computes the sum of all integers in the range `0..=100` (inclusive)
+
+```
+let sum = 0;
+for x in 0..=100 {
+    sum += x;
+}
+```
+
+This is an imperative style of completing the task, but we can make it more functional
+
+```
+(0..=100)
+    .iter()
+    .sum()
+```
+
+I think the functional approach is nice and clean, but if we want to make this
+run more efficiently we can replace it with the following.
+
+```
+100 * (100 + 1) / 2
+```
+
+This formula directly calculates the value without the need for iteration, isn't that nice :)
